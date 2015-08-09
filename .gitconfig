@@ -1,0 +1,13 @@
+[user]
+    name = Arnav Sastry
+    email = arnavsastry@gmail.com
+[core]
+    editor = vim
+[color]
+    ui = auto
+[github]
+    user = arknave
+    token = token
+[alias]
+    co = checkout
+    st = status
