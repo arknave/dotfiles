@@ -1,13 +1,22 @@
-[user]
-    name = Arnav Sastry
-    email = arnavsastry@gmail.com
-[core]
-    editor = vim
-[color]
-    ui = auto
-[github]
-    user = arknave
-    token = token
 [alias]
+    br = branch -av
     co = checkout
     st = status
+[apply]
+    # Detect whitespace errors when applying a patch
+    whitespace = fix
+[color]
+    # Use color where available
+    ui = auto
+[core]
+    editor = vim
+[help]
+    # Automatically correct and execute typos
+    autocorrect = 1
+[push]
+    # Use the git 2.0 behavior
+    default = simple
+[user]
+    user = arknave
+    name = Arnav Sastry
+    email = arnavsastry@gmail.com
