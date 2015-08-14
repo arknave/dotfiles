@@ -1,3 +1,19 @@
+# ----------------------------------------------------------------------------
+# aliases
+
+alias ls='ls -FG'
+
+# ----------------------------------------------------------------------------
+# exports
+
+export EDITOR=vim
+
+# Default blocksize for ls, df, du
+export BLOCKSIZE=1k
+
+# ----------------------------------------------------------------------------
+# shopt
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
@@ -6,3 +22,4 @@ shopt -s histappend;
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
+
