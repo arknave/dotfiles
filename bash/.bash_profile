@@ -1,4 +1,16 @@
 # ----------------------------------------------------------------------------
+# source other files
+for file in ~/.{bash_prompt,bash_extra}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+
+# ----------------------------------------------------------------------------
+# bash_completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
+# ----------------------------------------------------------------------------
 # aliases
 
 alias ls='ls -FG'
