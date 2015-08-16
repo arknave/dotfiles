@@ -1,28 +1,35 @@
 "------------------------------------------------------------------------------
 " URL: http://www.github.com/arknave/dotfiles
-" Authors: www.github.com/arknave
+" Author: www.github.com/arknave
 " Description: Arnav's vimrc file
 
 "------------------------------------------------------------------------------
 " Essentials
 set nocompatible
 set encoding=utf-8
-let mapleader  = ","
+let mapleader=","
 
 " vim-plug plugins
 call plug#begin()
+
 " Appearance
 Plug 'chriskempson/base16-vim'
 
 " Productivity
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
+Plug 'benekastah/neomake'
 
 " Languages
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+
 call plug#end()
 
 "------------------------------------------------------------------------------
 " Automatic Actions
+
+" Syntax checking
+autocmd! BufWritePost * Neomake
 
 " Recognize .md files as markdown
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -54,6 +61,7 @@ command Latex execute "pdflatex % && open %:r.pdf"
 set pastetoggle=<F2>
 nnoremap <F3> :Latex<CR>
 nnoremap <leader><space> :noh<CR>
+nnoremap <leader>l :set list!<CR>
 map Y y$
 
 set confirm " Ask to save instead of failing :q
@@ -97,3 +105,5 @@ syntax on
 
 set background=dark
 colorscheme base16-default
+
+set listchars=tab:▸\ ,eol:¬
