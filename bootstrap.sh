@@ -16,5 +16,6 @@ install_vim_plug
 stow vim
 stow bash
 stow git
+stow hammerspoon
 
 popd > /dev/null
