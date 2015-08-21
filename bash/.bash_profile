@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------------
 # source other files
-for file in ~/.{bash_prompt,bash_extra}; do
+for file in ~/.{bashrc,bash_prompt}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 

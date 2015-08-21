@@ -16,8 +16,9 @@ call plug#begin()
 Plug 'chriskempson/base16-vim'
 
 " Productivity
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
 Plug 'benekastah/neomake'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
 " Languages
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
@@ -72,6 +73,8 @@ if version >= 704
 endif
 
 set nojoinspaces " Use only 1 space after . when joining lines instead of 2
+
+set backspace=2
 
 "------------------------------------------------------------------------------
 " Undo
