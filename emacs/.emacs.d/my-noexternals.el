@@ -1,1 +1,1 @@
-(when (fboundp 'tool-bar-mode) (tool-bar-mode nil))
+(when (fboundp 'tool-bar-mode) (tool-bar-mode -1))

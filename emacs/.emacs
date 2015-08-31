@@ -8,4 +8,5 @@
 
 (set-face-attribute 'default t :font "Source Code Pro for Powerline-14")
 
-(load "~/.emacs.d/my-noexternals.el")
+(add-hook 'after-init-hook '(lambda ()
+                              (load "~/.emacs.d/my-noexternals.el")))
