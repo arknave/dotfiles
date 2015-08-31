@@ -18,7 +18,7 @@ alias ls='ls -FG'
 # ----------------------------------------------------------------------------
 # exports
 
-export EDITOR=vim
+export EDITOR=emacs
 
 # Default blocksize for ls, df, du
 export BLOCKSIZE=1k

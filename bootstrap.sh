@@ -17,5 +17,6 @@ stow vim
 stow bash
 stow git
 stow hammerspoon
+stow emacs
 
 popd > /dev/null
