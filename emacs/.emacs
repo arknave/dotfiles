@@ -1,3 +1,5 @@
+;;; .emacs
+
 ;; Use the saves directory for the backup ~ files
 (setq backup-directory-alist `(("." . "~/.saves")))
 
@@ -8,5 +10,6 @@
 
 (set-face-attribute 'default t :font "Source Code Pro for Powerline-14")
 
+(load "~/.emacs.d/my-loadpackages.el")
 (add-hook 'after-init-hook '(lambda ()
                               (load "~/.emacs.d/my-noexternals.el")))
