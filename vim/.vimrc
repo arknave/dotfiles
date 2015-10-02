@@ -56,7 +56,7 @@ set ignorecase
 set smartcase
 
 " Custom commands
-command Latex execute "!pdflatex % && open %:r.pdf"
+command Latex execute "!xelatex % && open %:r.pdf"
 
 " Key bindings
 set pastetoggle=<F2>
