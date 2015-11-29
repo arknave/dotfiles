@@ -18,7 +18,7 @@ alias ls='ls -FG'
 # ----------------------------------------------------------------------------
 # exports
 
-export EDITOR=emacs
+export EDITOR=vim
 
 # Default blocksize for ls, df, du
 export BLOCKSIZE=1k
@@ -35,3 +35,6 @@ shopt -s histappend;
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
+# ----------------------------------------------------------------------------
+# set
+set -o vi

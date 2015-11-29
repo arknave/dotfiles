@@ -17,12 +17,15 @@ Plug 'chriskempson/base16-vim'
 
 " Productivity
 Plug 'benekastah/neomake'
+Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
 " Languages
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'godlygeek/tabular', { 'for': 'markdown' } " Needed for markdown
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
 call plug#end()
 
@@ -34,6 +37,8 @@ autocmd! BufWritePost * Neomake
 
 " Recognize .md files as markdown
 au BufRead,BufNewFile *.md set filetype=markdown
+
+" TODO: turn spell checking on when entering Goyo, and off when exiting
 
 "------------------------------------------------------------------------------
 " Editor Behavior
