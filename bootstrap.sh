@@ -17,6 +17,7 @@ stow vim
 stow bash
 stow git
 stow hammerspoon
-stow emacs
+# stow emacs
+stow tmux
 
 popd > /dev/null
