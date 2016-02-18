@@ -15,6 +15,9 @@ call plug#begin()
 " Appearance
 Plug 'chriskempson/base16-vim'
 
+" Configuration
+Plug 'editorconfig/editorconfig-vim'
+
 " Productivity
 Plug 'benekastah/neomake'
 Plug 'junegunn/goyo.vim'
@@ -24,6 +27,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 " Languages
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+
 Plug 'godlygeek/tabular', { 'for': 'markdown' } " Needed for markdown
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
