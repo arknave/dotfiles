@@ -51,6 +51,8 @@ export BLOCKSIZE=1k
 shopt -s nocaseglob;
 
 # Append to the Bash history file, rather than overwriting it
+export HISTFILESIZE=500000
+export HISTSIZE=100000
 shopt -s histappend;
 
 # Autocorrect typos in path names when using `cd`

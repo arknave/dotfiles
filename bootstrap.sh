@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 # This script just calls stow on various subdirectories, depending on either input parameters or operating systems
+
+# Install vim plug if it isn't already.
 function install_vim_plug () {
     if [[ ! -f vim/.vim/autoload/plug.vim ]]; then
         curl -fLo vim/.vim/autoload/plug.vim --create-dirs \
