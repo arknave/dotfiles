@@ -1,10 +1,15 @@
 [alias]
-    br = branch -av
+    br = branch -v
+    ci = commit
+    cm = commit -m
+    ca = commit -am
     co = checkout
     st = status
 [apply]
     # Detect whitespace errors when applying a patch
     whitespace = fix
+[branch]
+    autosetuprebase = always
 [color]
     # Use color where available
     ui = auto
@@ -15,8 +20,7 @@
     # Automatically correct and execute typos
     autocorrect = 1
 [push]
-    # Use the git 2.0 behavior
-    default = simple
+    default = current
 [user]
     user = arknave
     name = Arnav Sastry
