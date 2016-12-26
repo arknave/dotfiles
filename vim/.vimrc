@@ -27,6 +27,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 " Languages
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'raichoo/purescript-vim'
 
 Plug 'godlygeek/tabular', { 'for': 'markdown' } " Needed for markdown
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
@@ -38,6 +39,15 @@ call plug#end()
 
 " Syntax checking
 autocmd! BufWritePost * Neomake
+
+let g:neomake_python_flake8_maker = {
+    \ 'exe': 'flake8',
+    \ 'args': ['--max-line-length=120'],
+    \ }
+
+let g:neomake_python_enabled_makers = ['flake8']
+
+let g:neomake_cpp_clang_args = ['-std=c++14']
 
 " Recognize .md files as markdown
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -53,7 +63,6 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set autoindent
-set cindent
 set smarttab
 
 " Highlight searches as you type
@@ -119,3 +128,5 @@ set background=dark
 colorscheme base16-default
 
 set listchars=tab:▸\ ,eol:¬
+
+set noswapfile
