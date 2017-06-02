@@ -125,7 +125,7 @@ set display+=lastline,uhex
 syntax on
 
 set background=dark
-colorscheme base16-default
+colorscheme base16-default-dark
 
 set listchars=tab:▸\ ,eol:¬
 
