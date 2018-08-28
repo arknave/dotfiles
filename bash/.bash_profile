@@ -9,7 +9,6 @@ command_exists () {
 # source other files
 
 for file in ~/.{bash_prompt,bashrc}; do
-    echo "$file"
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
@@ -28,7 +27,7 @@ alias ls='ls -FG'
 # ----------------------------------------------------------------------------
 # exports
 
-export EDITOR=vim
+export EDITOR=nvim
 
 # Default blocksize for ls, df, du
 export BLOCKSIZE=1k

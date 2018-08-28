@@ -19,5 +19,6 @@ stow vim
 stow bash
 stow git
 stow tmux
+stow nvim
 
 popd > /dev/null
