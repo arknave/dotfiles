@@ -14,7 +14,7 @@ function install_vim_plug () {
 pushd $(dirname "${BASH_SOURCE}") > /dev/null
 
 # For use on OSX
-install_vim_plug
+# install_vim_plug
 stow vim
 stow bash
 stow git
