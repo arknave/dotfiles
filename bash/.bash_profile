@@ -8,7 +8,8 @@ command_exists () {
 # ----------------------------------------------------------------------------
 # source other files
 
-for file in ~/.{bash_prompt}; do
+for file in ~/.{bash_prompt,bashrc}; do
+    echo "$file"
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
