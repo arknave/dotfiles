@@ -81,9 +81,14 @@ set display+=lastline,uhex
 syntax on
 
 set background=dark
+set t_Co=256
 " colorscheme base16-default-dark
 colorscheme desert
 
 set listchars=tab:▸\ ,eol:¬
+
+" Permanent undo
+set undofile
+set undodir=~/.config/nvim/undo
 
 set noswapfile
