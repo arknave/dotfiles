@@ -13,46 +13,27 @@ let mapleader=","
 call plug#begin()
 
 " Appearance
-Plug 'chriskempson/base16-vim'
+" Plug 'chriskempson/base16-vim'
 
 " Configuration
-Plug 'editorconfig/editorconfig-vim'
+" Plug 'editorconfig/editorconfig-vim'
 
 " Productivity
-Plug 'benekastah/neomake'
-Plug 'junegunn/goyo.vim'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+" Plug 'benekastah/neomake'
+" Plug 'junegunn/goyo.vim'
+" Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
 
 " Languages
-Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'raichoo/purescript-vim'
-
-Plug 'godlygeek/tabular', { 'for': 'markdown' } " Needed for markdown
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+" Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+" Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
 call plug#end()
 
 "------------------------------------------------------------------------------
 " Automatic Actions
 
-" Syntax checking
-autocmd! BufWritePost * Neomake
-
-let g:neomake_python_flake8_maker = {
-    \ 'exe': 'flake8',
-    \ 'args': ['--max-line-length=120'],
-    \ }
-
-let g:neomake_python_enabled_makers = ['flake8']
-
-let g:neomake_cpp_clang_args = ['-std=c++14']
-
 " Recognize .md files as markdown
 au BufRead,BufNewFile *.md set filetype=markdown
-
-" TODO: turn spell checking on when entering Goyo, and off when exiting
 
 "------------------------------------------------------------------------------
 " Editor Behavior
@@ -125,7 +106,8 @@ set display+=lastline,uhex
 syntax on
 
 set background=dark
-colorscheme base16-default-dark
+" colorscheme base16-default-dark
+colorscheme desert
 
 set listchars=tab:▸\ ,eol:¬
 
