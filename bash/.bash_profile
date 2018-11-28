@@ -15,14 +15,20 @@ done;
 # ----------------------------------------------------------------------------
 # bash_completion
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # ----------------------------------------------------------------------------
 # aliases
 
-alias ls='ls -FG'
+alias cat='bat'
+alias ls='exa -F'
+alias tree='exa -T'
+alias vi='nvim'
+alias vim='nvim'
+alias vimdiff='nvim -d'
+
+# competitive compiling
+alias c='g++ -std=c++17 -Wall -Werror -Wshadow -O2 -pedantic -fsanitize=undefined,address'
 
 # ----------------------------------------------------------------------------
 # exports
@@ -49,3 +55,5 @@ shopt -s cdspell;
 # ----------------------------------------------------------------------------
 # set
 set -o vi
+
+export PATH="$HOME/.cargo/bin:$PATH"

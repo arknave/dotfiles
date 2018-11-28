@@ -14,7 +14,7 @@
     # Use color where available
     ui = auto
 [core]
-    editor = vim
+    editor = nvim
     excludesfile = /Users/arnav/.gitignore
 [help]
     # Automatically correct and execute typos

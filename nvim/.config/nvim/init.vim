@@ -6,13 +6,37 @@
 
 "------------------------------------------------------------------------------
 " Essentials
-"
+
+set nocompatible
+
 " Load filetype info automatically
 filetype plugin indent on
 
 set encoding=utf-8
 let mapleader=","
-"
+
+"------------------------------------------------------------------------------
+" Plugin Manager (Dein)
+
+set runtimepath+=/Users/arnav/.config/nvim/dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state('/Users/arnav/.config/nvim/dein/')
+  call dein#begin('/Users/arnav/.config/nvim/dein/')
+
+  " Colors
+  call dein#add('morhetz/gruvbox')
+
+  " Deoplete
+  call dein#add('Shougo/deoplete.nvim')
+
+  " NERDTree
+  call dein#add('scrooloose/nerdtree',
+      \{'on_cmd': 'NERDTreeToggle'})
+
+  call dein#end()
+  call dein#save_state()
+endif
+
 "------------------------------------------------------------------------------
 " Automatic Actions
 
@@ -80,15 +104,23 @@ set display+=lastline,uhex
 " Display
 syntax on
 
+" Colors
 set background=dark
 set t_Co=256
-" colorscheme base16-default-dark
-colorscheme desert
+set termguicolors
+let g:gruvbox_bold=1
+let g:gruvbox_italic=1
+let g:gruvbox_underline=1
+let g:gruvbox_undercurl=1
+colorscheme gruvbox
 
 set listchars=tab:▸\ ,eol:¬
 
 " Permanent undo
 set undofile
-set undodir=~/.config/nvim/undo
+set undodir=/Users/arnav/.config/nvim/undo
 
 set noswapfile
+
+" Mouse
+set mouse=a
