@@ -11,14 +11,15 @@ function install_vim_plug () {
 }
 
 # go to the right directory
-pushd $(dirname "${BASH_SOURCE}") > /dev/null
+# pushd $(dirname "${BASH_SOURCE}") > /dev/null
 
 # For use on OSX
-# install_vim_plug
+install_vim_plug
 stow vim
-stow bash
+# stow bash
+stow zsh
 stow git
-stow tmux
-stow nvim
+# stow tmux
+# stow nvim
 
 popd > /dev/null

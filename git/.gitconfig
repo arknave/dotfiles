@@ -1,8 +1,6 @@
 [alias]
     br = branch -v
     ci = commit
-    cm = commit -m
-    ca = commit -am
     co = checkout
     st = status
 [apply]
@@ -14,7 +12,7 @@
     # Use color where available
     ui = auto
 [core]
-    editor = nvim
+    editor = vim
     excludesfile = /Users/arnav/.gitignore
 [help]
     # Automatically correct and execute typos

@@ -14,6 +14,7 @@ call plug#begin()
 
 " Appearance
 " Plug 'chriskempson/base16-vim'
+Plug 'morhetz/gruvbox'
 
 " Configuration
 " Plug 'editorconfig/editorconfig-vim'
@@ -67,9 +68,7 @@ map Y y$
 set confirm " Ask to save instead of failing :q
 set mouse=a " Enable mouse
 
-if version >= 704
-    set formatoptions+=j " Delete comment character when joining lines
-endif
+set formatoptions+=j " Delete comment character when joining lines
 
 set nojoinspaces " Use only 1 space after . when joining lines instead of 2
 
@@ -107,7 +106,8 @@ syntax on
 
 set background=dark
 " colorscheme base16-default-dark
-colorscheme desert
+" colorscheme desert
+colorscheme gruvbox
 
 set listchars=tab:▸\ ,eol:¬
 
