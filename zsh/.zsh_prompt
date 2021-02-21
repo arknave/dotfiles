@@ -1,0 +1,11 @@
+PROMPT="|%F{green}%n"; # username
+PROMPT+="@";
+PROMPT+="%m"; # host
+PROMPT+="%f| ";
+PROMPT+="%F{yellow}%~%f"; # working directory
+PROMPT+="%f %(!.#.𝄢) "; # `$` (and reset color)
+export PROMPT;
+
+RPROMPT="%*"
+
+export RPROMPT;

@@ -11,10 +11,14 @@ function install_vim_plug () {
 }
 
 # go to the right directory
+# Bash Version
 # pushd $(dirname "${BASH_SOURCE}") > /dev/null
 
+# Zsh Version
+pushd $(dirname "${(%):-%N}") > /dev/null
+
 # For use on OSX
-install_vim_plug
+# install_vim_plug
 stow vim
 # stow bash
 stow zsh

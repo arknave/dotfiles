@@ -1,3 +1,7 @@
+# source other files
+
+source "$HOME/.zsh_prompt"
+
 # ----------------------------------------------------------------------------
 # aliases
 alias vi='vim'
