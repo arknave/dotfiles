@@ -45,7 +45,9 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set autoindent
+set smartindent
 set smarttab
+filetype indent on
 
 " Highlight searches as you type
 set incsearch
@@ -74,6 +76,8 @@ set nojoinspaces " Use only 1 space after . when joining lines instead of 2
 
 set backspace=2
 
+set noswapfile
+
 "------------------------------------------------------------------------------
 " Undo
 set undodir=~/.vim/undo
@@ -89,6 +93,7 @@ set number
 set relativenumber
 
 set laststatus=2 " always display status bar
+set showmode " Show mode
 set ruler " show cursor position
 set showcmd " Show commands as they're being typed
 
