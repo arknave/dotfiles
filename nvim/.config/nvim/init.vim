@@ -6,36 +6,22 @@
 
 "------------------------------------------------------------------------------
 " Essentials
-
 set nocompatible
+set encoding=utf-8
+let mapleader=","
 
 " Load filetype info automatically
 filetype plugin indent on
 
-set encoding=utf-8
-let mapleader=","
 
 "------------------------------------------------------------------------------
-" Plugin Manager (Dein)
+" Plugin Manager (vim-plug)
 
-set runtimepath+=/Users/arnav/.config/nvim/dein/repos/github.com/Shougo/dein.vim
+call plug#begin(stdpath('data') . '/plugged')
 
-if dein#load_state('/Users/arnav/.config/nvim/dein/')
-  call dein#begin('/Users/arnav/.config/nvim/dein/')
+Plug 'morhetz/gruvbox'
 
-  " Colors
-  call dein#add('morhetz/gruvbox')
-
-  " Deoplete
-  call dein#add('Shougo/deoplete.nvim')
-
-  " NERDTree
-  call dein#add('scrooloose/nerdtree',
-      \{'on_cmd': 'NERDTreeToggle'})
-
-  call dein#end()
-  call dein#save_state()
-endif
+call plug#end()
 
 "------------------------------------------------------------------------------
 " Automatic Actions
@@ -52,6 +38,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set autoindent
+set smartindent
 set smarttab
 
 " Highlight searches as you type
@@ -81,6 +68,15 @@ set nojoinspaces " Use only 1 space after . when joining lines instead of 2
 
 set backspace=2
 
+set noswapfile
+
+"------------------------------------------------------------------------------
+" Undo
+set undodir=~/.config/nvim/undo
+set undofile
+set undolevels=1000
+set undoreload=10000
+
 "------------------------------------------------------------------------------
 " Interface
 
@@ -89,6 +85,7 @@ set number
 set relativenumber
 
 set laststatus=2 " always display status bar
+set showmode
 set ruler " show cursor position
 set showcmd " Show commands as they're being typed
 
@@ -106,21 +103,6 @@ syntax on
 
 " Colors
 set background=dark
-set t_Co=256
-set termguicolors
-let g:gruvbox_bold=1
-let g:gruvbox_italic=1
-let g:gruvbox_underline=1
-let g:gruvbox_undercurl=1
 colorscheme gruvbox
 
 set listchars=tab:▸\ ,eol:¬
-
-" Permanent undo
-set undofile
-set undodir=/Users/arnav/.config/nvim/undo
-
-set noswapfile
-
-" Mouse
-set mouse=a

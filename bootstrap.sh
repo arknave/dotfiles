@@ -19,11 +19,11 @@ pushd $(dirname "${(%):-%N}") > /dev/null
 
 # For use on OSX
 # install_vim_plug
-stow vim
+# stow vim
 # stow bash
 stow zsh
 stow git
 # stow tmux
-# stow nvim
+stow nvim
 
 popd > /dev/null

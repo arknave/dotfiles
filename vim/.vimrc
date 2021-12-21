@@ -115,5 +115,3 @@ set background=dark
 colorscheme gruvbox
 
 set listchars=tab:▸\ ,eol:¬
-
-set noswapfile

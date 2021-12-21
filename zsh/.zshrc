@@ -4,9 +4,12 @@ source "$HOME/.zsh_prompt"
 
 # ----------------------------------------------------------------------------
 # aliases
-alias vi='vim'
-alias c='g++ -std=c++17 -Wall -Werror -Wshadow -O2 -pedantic -fsanitize=undefined,address'
+alias vi='nvim'
+alias vim='nvim'
+alias c='g++ -std=c++17 -Wall -Werror -Wshadow -O2 -pedantic -fsanitize=undefined,address -Wl,-stack_size -Wl,0x10000000'
+alias cf='g++ -std=c++17 -Wall -Werror -Wshadow -O2 -Ofast -pedantic -Wl,-stack_size -Wl,0x10000000'
 alias ls='ls -F'
+alias rot13='tr A-MN-Za-mn-z N-ZA-Mn-za-m'
 
 # ----------------------------------------------------------------------------
 # exports
@@ -17,7 +20,7 @@ HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=2000
 SAVEHIST=1000
 
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/Users/arnav/bin:/usr/local/opt/openjdk/bin:$PATH"
 export CLICOLOR=1
 
 # ----------------------------------------------------------------------------
